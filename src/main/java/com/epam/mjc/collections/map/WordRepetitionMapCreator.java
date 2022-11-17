@@ -13,8 +13,10 @@ public class WordRepetitionMapCreator {
             if(m.containsKey(word))
                 m.replace(word,m.get(word) + 1);
             else
-                m.put(word, 1);
+                if (!word.isEmpty())
+                    m.put(word, 1);
         }
         return m;
     }
+
 }
