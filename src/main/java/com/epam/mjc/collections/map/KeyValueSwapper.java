@@ -10,7 +10,7 @@ public class KeyValueSwapper {
         for(Map.Entry<Integer, String> m : sourceMap.entrySet())
         {
             if(map.containsKey(m.getValue()) && m.getKey() < map.get(m.getValue()))
-                map.replace(m.getValue(),m.getKey());
+                map.put(m.getValue(),m.getKey());
             else
                 map.put(m.getValue(),m.getKey());
         }
